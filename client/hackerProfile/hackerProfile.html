@@ -1,26 +1,34 @@
 <template name = "hackerProfile">
 
 	<div class = "container">
-		<form>
+	{{ > navbar }}
+	<!--If user matches show form -->
+	{{#if currentUser}}
+	<h3> Email: {{ useremail }} </h3>
+	<form>
 			<div class = "form-group"> 
 				<label>Legal Name: </label>
-				<input type = "text" id="legal-name"  class = "form-control" placeholder = "Legal Name">
+				<input type = "text" id="legal-name" value="" class = "form-control" placeholder = "Legal Name">
 			</div>
 			<div class = "form-group"> 
 				<label>Pseudonym: </label>
-				<input type = "text"  id="psuedonym" class = "form-control" placeholder = "Pseudonym">
+				<input type = "text"  id="pseudonym" value="" class = "form-control" placeholder = "Pseudonym">
 			</div>
 			<div class = "form-group"> 
 				<label>Email: </label>
-				<input type = "email"  id="email" class = "form-control" placeholder = "Email">
+				<input type = "email"  id="email" value="{{ useremail }}" class = "form-control" placeholder = "Email">
 			</div>
 			<div class = "form-group"> 
 				<label>Best Hack: </label>
-				<input type = "text" id="best-hack" class = "form-control" placeholder = "Best Hack">
+				<input type = "text" id="best-hack" value="" class = "form-control" placeholder = "Best Hack">
 			</div>
 			<button type = "submit" id="submit" class = "btn btn-default">SUBMIT</button>
 		</form>
-	</div>
-
-
+		<div>
+		{{getUser}}
+		</div>
+	{{else}}
+		Sorry man top secret.
+	{{/if}}
+	</div>	
 </template>

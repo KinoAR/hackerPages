@@ -1,0 +1,11 @@
+<template name="hackerlist">
+  <div class="container-fluid">
+  {{ > navbar }}
+  <!-- Display Hacker Objects & specific fields -->
+    <ul class="list-group">
+      {{#each hackers }}
+      <li class="list-group-item"> Pseudonym: {{pseudonym}} | Email: {{email}} | Best Hack: {{ bestHack}} </li>
+      {{/each}}
+    </ul>
+  </div>
+</template>

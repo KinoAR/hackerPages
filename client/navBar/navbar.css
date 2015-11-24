@@ -1,0 +1,12 @@
+.navbar {
+  min-height: 40px;
+}
+.nav {
+	margin-bottom: 0px;
+}
+a {
+  color:blue;
+}
+ul.nav {
+  color:white;
+}
